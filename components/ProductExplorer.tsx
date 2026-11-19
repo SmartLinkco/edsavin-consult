@@ -1,18 +1,15 @@
 import Link from "next/link";
 import { Actions } from "@/components/Actions";
 import { Photo } from "@/components/Photo";
-import { PhLabel } from "@/components/Placeholder";
-import { lines, productsIn } from "@/content/site";
+import { home, lines, productsIn } from "@/content/site";
 
 export function ProductExplorer() {
   return (
     <section className="band" id="products" aria-labelledby="explorer-heading">
       <div className="wrap">
-        <p className="kicker">Product explorer</p>
-        <h2 id="explorer-heading">Switch line of work, then enquire.</h2>
-        <p className="section-lead">
-          Livestock, meat, crops, or gari and starch. Open a line, then send an enquiry or a WhatsApp message with that product already named.
-        </p>
+        <p className="kicker">{home.explorerKicker}</p>
+        <h2 id="explorer-heading">{home.explorerHeading}</h2>
+        <p className="section-lead">{home.explorerLead}</p>
         <div className="ex-board">
           <div className="ex-tabs">
             {lines.map((line, index) => (
@@ -31,16 +28,14 @@ export function ProductExplorer() {
                       <article className="mini-card">
                         <Photo src={product.photo.src} alt={product.photo.alt} sizes="(min-width: 900px) 25vw, 80vw" />
                         <h3>{product.name}</h3>
-                        <p>
-                          <PhLabel /> {product.summary}
-                        </p>
+                        <p>{product.summary}</p>
                         <Actions productId={product.id} productName={product.name} />
                       </article>
                     </li>
                   ))}
                 </ul>
                 <p className="ex-more">
-                  <Link href={line.href}>See the {line.title} page</Link>
+                  <Link href={line.href}>{line.more}</Link>
                 </p>
               </div>
             ))}

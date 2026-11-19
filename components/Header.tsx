@@ -4,9 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Logo } from "@/components/Logo";
-import { nav } from "@/content/site";
+import { cta, footer, nav } from "@/content/site";
 
-const menuLinks = [...nav, { href: "/enquiry", label: "Enquiry / Order" }, { href: "/privacy", label: "Privacy" }];
+const menuLinks = [...nav, { href: "/enquiry", label: footer.enquiry }, { href: "/privacy", label: footer.privacy }];
 
 export function Header() {
   const path = usePathname();
@@ -50,7 +50,7 @@ export function Header() {
             </Link>
           ))}
           <Link className="btn btn-red" href="/enquiry">
-            Make an enquiry
+            {cta.enquire}
           </Link>
         </nav>
         <button
@@ -61,7 +61,7 @@ export function Header() {
           aria-controls="site-menu"
           onClick={() => setOpen((value) => !value)}
         >
-          <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
+          <span className="sr-only">{open ? cta.menuClose : cta.menuOpen}</span>
           <span className="burger" aria-hidden="true" />
         </button>
       </div>
@@ -76,7 +76,7 @@ export function Header() {
               toggleRef.current?.focus();
             }}
           >
-            Close
+            {cta.close}
           </button>
           <nav aria-label="Mobile">
             {menuLinks.map((item) => (

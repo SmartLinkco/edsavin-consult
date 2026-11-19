@@ -1,4 +1,4 @@
-import { contact } from "@/content/site";
+import { contact, cta } from "@/content/site";
 import { whatsappHref } from "@/lib/whatsapp";
 
 function ChatIcon() {
@@ -19,7 +19,7 @@ export function WhatsAppLink({
   product?: string;
   className?: string;
 }) {
-  const label = product ? `WhatsApp about ${product}` : "WhatsApp";
+  const label = product ? cta.whatsappAbout(product) : cta.whatsapp;
   return (
     <a
       className={className}

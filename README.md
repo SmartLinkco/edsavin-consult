@@ -89,17 +89,7 @@ Colours are Signal Red `#E30613`, Ink Black `#1A1A1A`, White `#FFFFFF`, Mist Gre
 
 ## What the client still needs to send
 
-The full list is `clientChecklist` in `content/site.ts`. In short:
-
-- About story, mission, and values (the four value cards are suggestions only)
-- Mr Saaka's biography and photograph, plus any other team names, roles, biographies and photographs
-- Product details, availability, seasons and pack sizes for every livestock type, meat cut, crop, gari and starch
-- What the meat expansion includes, how buyers pay, and where orders are delivered or collected
-- This farm's own gari and starch method, if it should replace the short general outline
-- Real photographs of animals, fields, meat, processing, premises and the team
-- Phone, WhatsApp, public email, street address, town, region, map pin and social profile URLs
-- How long enquiry messages are kept, whether Analytics should be on, and any registered address or registration number
-- The domain, the enquiry inbox, and either a Resend key or SMTP login
+The full list is `clientChecklist` in `content/site.ts`. The sales copy is already written. What is still missing is facts only the farm can supply: Mr Saaka's own story and photograph, other team names, pack sizes, seasons, payment methods, delivery areas, the farm's own photos, and the contact details.
 
 Prices are not shown. The site takes enquiries rather than payment. Add prices in `content/site.ts` only if they should be published.
 

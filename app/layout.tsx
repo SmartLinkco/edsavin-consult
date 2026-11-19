@@ -4,7 +4,7 @@ import { Analytics } from "@/components/Analytics";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { MobileBar } from "@/components/MobileBar";
-import { COMPANY, contact, siteUrl } from "@/content/site";
+import { COMPANY, contact, home, siteUrl } from "@/content/site";
 import { rootMetadata } from "@/lib/seo";
 import "./globals.css";
 
@@ -36,8 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@type": "Organization",
     name: COMPANY,
     url: siteUrl(),
-    description:
-      "Ghanaian farm business rearing livestock, producing meat, growing crops, and processing cassava into gari and starch.",
+    description: home.metaDescription,
     address: { "@type": "PostalAddress", addressCountry: "GH" },
   };
   if (!contact.emailIsPlaceholder) jsonLd.email = contact.email;

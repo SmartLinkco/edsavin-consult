@@ -1,15 +1,15 @@
 import Link from "next/link";
-import { COMPANY } from "@/content/site";
+import { COMPANY, cta, notFound } from "@/content/site";
 
 export default function NotFound() {
   return (
     <div className="wrap not-found">
       <p className="kicker">{COMPANY}</p>
-      <h1>Page not found</h1>
-      <p>That address is not one of the ten pages on this site.</p>
+      <h1>{notFound.title}</h1>
+      <p>{notFound.body}</p>
       <p>
         <Link className="btn btn-red" href="/">
-          Back to the home page
+          {cta.home}
         </Link>
       </p>
     </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
+import { cta } from "@/content/site";
 
 export function Actions({
   productId,
@@ -13,7 +14,7 @@ export function Actions({
   enquireClass?: string;
 }) {
   const href = productId ? `/enquiry?product=${encodeURIComponent(productId)}` : "/enquiry";
-  const label = productName ? `Enquire about ${productName}` : "Make an enquiry";
+  const label = productName ? cta.enquireAbout(productName) : cta.enquire;
   return (
     <div className="actions">
       <Link className={enquireClass} href={href}>

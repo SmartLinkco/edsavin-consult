@@ -3,29 +3,23 @@ import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { PhLabel } from "@/components/Placeholder";
 import { ProductGrid } from "@/components/ProductCard";
+import { ClosingBand } from "@/components/Trust";
 import { photos, processingPage, productsIn } from "@/content/site";
 import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = pageMeta(
-  "Processing (Gari & Starch)",
-  "How cassava becomes gari and starch at EDSAVIN CONSULT AND TRADING, with pack sizes to confirm and a way to enquire.",
-  "/processing",
-);
+export const metadata: Metadata = pageMeta(processingPage.metaTitle, processingPage.metaDescription, "/processing");
 
 export default function ProcessingPage() {
   return (
     <>
-      <PageHero
-        title="Processing (Gari & Starch)"
-        lede={processingPage.intro}
-        photo={photos.heroProcessing}
-      />
+      <PageHero title={processingPage.title} lede={processingPage.lede} photo={photos.heroProcessing} />
       <section className="section">
         <div className="wrap">
           <ProductGrid products={productsIn("processing")} />
           <div className="split" style={{ marginTop: "2rem" }}>
             <article>
-              <h2>Gari, in outline</h2>
+              <h2>{processingPage.gariHeading}</h2>
+              <p>{processingPage.gariLead}</p>
               <ol className="order-list">
                 {processingPage.gariSteps.map((step) => (
                   <li key={step}>{step}</li>
@@ -33,7 +27,8 @@ export default function ProcessingPage() {
               </ol>
             </article>
             <article>
-              <h2>Starch, in outline</h2>
+              <h2>{processingPage.starchHeading}</h2>
+              <p>{processingPage.starchLead}</p>
               <ol className="order-list">
                 {processingPage.starchSteps.map((step) => (
                   <li key={step}>{step}</li>
@@ -42,13 +37,14 @@ export default function ProcessingPage() {
             </article>
           </div>
           <p style={{ marginTop: "1rem" }}>
-            <PhLabel /> {processingPage.methodNote}
+            <PhLabel /> {processingPage.methodGap}
           </p>
           <p>
-            <Link href="/#journey">Follow cassava from the field to the buyer</Link>
+            <Link href="/#journey">{processingPage.journeyLink}</Link>
           </p>
         </div>
       </section>
+      <ClosingBand kicker="Gari and starch" heading={processingPage.ctaHeading} body={processingPage.ctaBody} />
     </>
   );
 }

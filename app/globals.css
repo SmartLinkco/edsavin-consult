@@ -383,6 +383,26 @@ a { color: inherit; }
 }
 .mini-card h3, .product h2 { margin-top: 0.7rem; }
 .product h2 { font-size: 1.35rem; }
+.why-grid { display: grid; gap: 0.8rem; }
+.why-grid h2 { font-size: 1.35rem; letter-spacing: -0.02em; }
+.buyer-row { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0.8rem 0 0; padding: 0; list-style: none; }
+.buyer-row li {
+  border: 2px solid var(--ink);
+  padding: 0.35rem 0.65rem;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary {
+  cursor: pointer;
+  font-family: var(--display);
+  font-weight: 800;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+}
+.faq details p { margin: 0 0 0.8rem; }
 .ex-more { margin-top: 1rem; }
 .ex-more a { font-family: var(--display); font-weight: 800; }
 
@@ -659,7 +679,8 @@ body { padding-bottom: 5rem; }
   .step { grid-template-columns: 1fr; align-items: center; }
   .product-grid { grid-template-columns: 1fr 1fr 1fr; }
   .gal-grid { grid-template-columns: 1fr 1fr 1fr; }
-  .team-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+  .why-grid { grid-template-columns: 1fr 1fr 1fr; }
 }
 
 @media (min-width: 1180px) {

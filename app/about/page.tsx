@@ -1,63 +1,51 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
-import { PhLabel, PhRegion } from "@/components/Placeholder";
+import { PhLabel } from "@/components/Placeholder";
+import { ClosingBand } from "@/components/Trust";
 import { about, photos } from "@/content/site";
 import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = pageMeta(
-  "About & Team",
-  "The story, mission, values and team of EDSAVIN CONSULT AND TRADING. Story and team details are waiting for the farm.",
-  "/about",
-);
+export const metadata: Metadata = pageMeta(about.metaTitle, about.metaDescription, "/about");
 
 export default function AboutPage() {
   return (
     <>
-      <PageHero
-        title="About & Team"
-        lede="The people and the purpose behind the livestock, the meat, the crops, and the gari and starch."
-        photo={photos.galleryFields}
-      />
+      <PageHero title={about.title} lede={about.lede} photo={photos.galleryFields} />
       <section className="section">
         <div className="wrap prose">
-          <h2>The story</h2>
-          <PhRegion>
-            {about.story.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </PhRegion>
-
-          <h2>Mission</h2>
+          <p className="kicker">{about.storyKicker}</p>
+          <h2>{about.storyHeading}</h2>
+          {about.story.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
           <p>
-            <PhLabel /> {about.mission}
+            <PhLabel /> {about.storyGap}
           </p>
 
-          <h2>Values</h2>
-          <PhRegion>
-            <p>These four cards are suggestions. Replace them with the words the business actually uses.</p>
-          </PhRegion>
+          <h2>{about.promiseHeading}</h2>
+          <p>{about.promise}</p>
+
+          <h2>{about.valuesHeading}</h2>
           <div className="value-grid">
             {about.values.map((value) => (
               <article key={value.title} className="value-card">
                 <h3>{value.title}</h3>
-                <p>
-                  <PhLabel /> {value.text}
-                </p>
+                <p>{value.text}</p>
               </article>
             ))}
           </div>
 
-          <h2>Team</h2>
-          <p>Photographs of named people have not been supplied. The frames below stay empty until they arrive.</p>
+          <h2>{about.teamHeading}</h2>
+          <p>{about.teamLead}</p>
           <div className="team-grid">
-            {about.team.map((person, index) => (
-              <article key={person.name || `member-${index}`} className="team-card">
+            {about.team.map((person) => (
+              <article key={person.role} className="team-card">
                 <div className="portrait-missing">
                   <PhLabel />
-                  <span>Photo to come</span>
+                  <span>{about.photoGap}</span>
                 </div>
-                <h3>{person.name || <><PhLabel /> Name</>}</h3>
-                <p>{person.role || <><PhLabel /> Role</>}</p>
+                <h3>{person.nameIsPlaceholder ? <><PhLabel /> {person.name}</> : person.name}</h3>
+                <p>{person.roleIsPlaceholder ? <><PhLabel /> {person.role}</> : person.role}</p>
                 <p>
                   <PhLabel /> {person.bio}
                 </p>
@@ -66,6 +54,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <ClosingBand kicker={about.storyKicker} heading={about.ctaHeading} body={about.ctaBody} />
     </>
   );
 }
