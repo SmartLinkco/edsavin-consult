@@ -20,13 +20,6 @@ export function siteUrl() {
   return `https://${raw}`;
 }
 
-export const site = {
-  /** Set to false once the draft note at the top of every page should go. */
-  showDraftBanner: true,
-  draftBanner:
-    "Draft website. Anything tagged [PLACEHOLDER] is waiting for the client: the About story, team, product details, pack sizes, seasons, photos, phone, WhatsApp, email, address and social links.",
-} as const;
-
 export type Photo = {
   src: string;
   alt: string;
@@ -632,5 +625,4 @@ export const clientChecklist: { item: string; where: string }[] = [
   { item: "Inbox that receives enquiry forms", where: "environment variable ENQUIRY_TO_EMAIL" },
   { item: "From address, plus Resend or SMTP, so the form can actually send", where: "ENQUIRY_FROM_EMAIL and RESEND_API_KEY or SMTP_*" },
   { item: "Optional Google Search Console verification code", where: "NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION" },
-  { item: "Hide the draft banner when the site should no longer say it is a draft", where: "site.showDraftBanner" },
 ];

@@ -76,7 +76,8 @@ When a string is real, delete the surrounding placeholder treatment by clearing 
 - `contact.whatsappIsPlaceholder = false` after `whatsappDigits` is the real number (digits only, country code, no `+`, for example `233XXXXXXXXX`)
 - `contact.emailIsPlaceholder = false` after `contact.email` is the real public address
 - `contact.phoneTel` can be set to the same number with a leading `+` once the phone should be tappable
-- `site.showDraftBanner = false` when the draft note at the top of every page should disappear
+
+The draft banner has been removed from every page. `[PLACEHOLDER]` tags stay in the content until the real text, photos and contact details replace them. There is no banner switch left to turn off.
 
 Photographs are AI-generated stand-ins for a Ghanaian farm. They are not the client's pictures. Replace each file in [`public/images`](public/images) with the farm's own photo, keeping the file name, or change `src` in the `photos` object and update `alt` to describe the new picture. Do not download photos from other websites.
 

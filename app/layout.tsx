@@ -4,7 +4,7 @@ import { Analytics } from "@/components/Analytics";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { MobileBar } from "@/components/MobileBar";
-import { COMPANY, contact, site, siteUrl } from "@/content/site";
+import { COMPANY, contact, siteUrl } from "@/content/site";
 import { rootMetadata } from "@/lib/seo";
 import "./globals.css";
 
@@ -52,11 +52,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <Header />
-        {site.showDraftBanner ? (
-          <div className="draft-banner" role="note">
-            <div className="wrap">{site.draftBanner}</div>
-          </div>
-        ) : null}
         <main id="content">{children}</main>
         <Footer />
         <MobileBar />
