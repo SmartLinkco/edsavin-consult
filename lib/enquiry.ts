@@ -99,7 +99,7 @@ export function validateEnquiry(input: EnquiryInput):
 
 function enquiryText(enquiry: Enquiry) {
   return [
-    `New enquiry from the ${COMPANY} website`,
+    `New enquiry for ${COMPANY}`,
     "",
     `Name: ${enquiry.name}`,
     `Email: ${enquiry.email}`,

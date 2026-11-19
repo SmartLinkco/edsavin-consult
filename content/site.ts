@@ -26,7 +26,7 @@ export type Photo = {
   wide?: boolean;
 };
 
-const placeholderPhoto = " AI-generated placeholder photo to be replaced with the farm's own picture.";
+const placeholderPhoto = " Stand-in photo, to be replaced with a real photograph.";
 
 export const photos = {
   heroFields: {
@@ -155,7 +155,7 @@ export const products: Product[] = [
     line: "livestock",
     photo: photos.guineaFowl,
     summary: "A bird the Ghanaian pot already knows. Ask for live birds and say how many.",
-    details: "Useful for the house, a chop bar or a caterer who wants birds from the farm, not from a seller who cannot name the source. Tell us the number and the day. We reply with what we can supply.",
+    details: "Useful for the house, a chop bar or a caterer who wants our birds, not a seller who cannot name the source. Tell us the number and the day. We reply with what we can supply.",
     availability: "When guinea fowl are ready",
     pack: "How the birds are grouped for sale",
   },
@@ -164,7 +164,7 @@ export const products: Product[] = [
     name: "Duck",
     line: "livestock",
     photo: photos.duck,
-    summary: "For a special pot or a kitchen that wants duck from the farm.",
+    summary: "For a special pot, or a kitchen that wants duck from us.",
     details: "Say whether you want live birds, how many, and when you need them. We confirm the supply before you commit.",
     availability: "When ducks are ready",
     pack: "How ducks are grouped for sale",
@@ -194,7 +194,7 @@ export const products: Product[] = [
     name: "Cattle",
     line: "livestock",
     photo: photos.cattle,
-    summary: "For a buyer who needs cattle from the farm, not from an open market pen.",
+    summary: "For a buyer who needs cattle from us, not from an open market pen.",
     details: "Households rarely need a whole animal. Traders, caterers and partners often do. Say the number and the timing. We reply with what is available.",
     availability: "When cattle are ready",
     pack: "How cattle are grouped for sale",
@@ -215,7 +215,7 @@ export const products: Product[] = [
     line: "livestock",
     photo: photos.tortoise,
     summary: "Ask if tortoise is what your buyer or your own table wants.",
-    details: "Tell us the number and when you need them. We confirm what we can supply. Species and age are not published here yet.",
+    details: "Tell us the number and when you need them. We confirm what we can supply. We have not published species and age here yet.",
     availability: "When tortoises are ready",
     pack: "How tortoises are grouped for sale",
   },
@@ -244,7 +244,7 @@ export const products: Product[] = [
     name: "Sheep meat (mutton)",
     line: "meat",
     photo: photos.mutton,
-    summary: "Mutton for the pot, ordered from the same farm that keeps the sheep.",
+    summary: "Mutton for the pot. We keep the sheep as well.",
     details: "Say the weight, the day and whether it is for the house or a kitchen. We confirm the cut we can supply. Live sheep are listed separately under Livestock.",
     availability: "When mutton is ready",
     pack: "Cuts and pack size for mutton",
@@ -254,8 +254,8 @@ export const products: Product[] = [
     name: "Cassava",
     line: "crops",
     photo: photos.cassava,
-    summary: "Roots from the same farm that makes the gari and the starch.",
-    details: "Order fresh roots if that is what you cook or trade. If you want them already processed, ask for gari or starch instead. Tell us the quantity and the week.",
+    summary: "Roots from us. We also make the gari and the starch.",
+    details: "Order fresh roots if that is what you cook or trade. If you want them already processed, ask us for gari or starch instead. Tell us the quantity and the week.",
     availability: "Cassava season",
     pack: "How cassava roots are packed",
   },
@@ -264,7 +264,7 @@ export const products: Product[] = [
     name: "Maize",
     line: "crops",
     photo: photos.maize,
-    summary: "Maize for the house, a mill or a trader who wants it from the farm.",
+    summary: "Maize for the house, a mill, or a trader who wants it from us.",
     details: "Say whether you want it fresh or dry, and how much. We confirm what that harvest can give you. We do not publish a price list here.",
     availability: "Maize season",
     pack: "How maize is packed",
@@ -275,7 +275,7 @@ export const products: Product[] = [
     line: "crops",
     photo: photos.beans,
     summary: "Beans for the pot or the shop, ordered without a middle trader.",
-    details: "Tell us the quantity and when you need them. Variety and whether they are sold dried are confirmed in the reply, not guessed on this page.",
+    details: "Tell us the quantity and when you need them. We confirm the variety, and whether they are dried, in our reply. We do not guess that on this page.",
     availability: "Beans season",
     pack: "How beans are packed",
   },
@@ -285,7 +285,7 @@ export const products: Product[] = [
     line: "processing",
     photo: photos.gari,
     summary: "Gari for the soaking bowl, the shop shelf or the hotel store.",
-    details: "Made from cassava grown by EDSAVIN CONSULT AND TRADING. Say how many bags you need and who they are for. We confirm grade, colour and bag size before you pay anyone.",
+    details: "We make it from cassava we grow. Say how many bags you need and who they are for. We confirm grade, colour and bag size before you pay anyone.",
     availability: "When gari is ready",
     pack: "Bag sizes for gari",
   },
@@ -348,7 +348,7 @@ export const lines: {
     navLabel: "Crops",
     href: "/crops",
     photo: photos.heroFields,
-    text: "Cassava, maize and beans from the farm. Ask the season and the bag.",
+    text: "Cassava, maize and beans we grow. Ask us the season and the bag.",
     more: "See the crops",
   },
   {
@@ -389,16 +389,16 @@ export const cta = {
 
 export const whatsappCopy = {
   withProduct: (product: string) =>
-    `Hello ${COMPANY}, I want to order ${product}. Please tell me what is ready, how it is packed, and how I can collect or pay.`,
-  general: `Hello ${COMPANY}, I want to place an order. Please tell me what is ready, and how I can collect or pay.`,
+    `Hello ${COMPANY}, I'd like to order ${product}. Please tell me what is ready, how it is packed, and how I can collect or pay.`,
+  general: `Hello ${COMPANY}, I'd like to place an order. Please tell me what is ready, and how I can collect or pay.`,
 };
 
 export const home = {
-  headline: "Food from the farm, for the house and the trade.",
-  lead: "Households, restaurants, chop bars, hotels, caterers, retailers and distributors can ask EDSAVIN CONSULT AND TRADING what is ready today. Enquire now. We confirm the supply before you commit.",
+  headline: "Food from our farm, for your house and your trade.",
+  lead: "We are EDSAVIN CONSULT AND TRADING. We supply households, restaurants, chop bars, hotels, caterers, retailers and distributors. Tell us what you need today. We confirm what is ready before you commit.",
   buyersKicker: "Who it is for",
   buyersHeading: "If you cook it, sell it or serve it, start here.",
-  buyersBody: "The same farm answers a family order and a bulk order. Say who you are in the message so the reply fits.",
+  buyersBody: "We answer a family order and a bulk order the same way. Tell us who you are, so our reply fits.",
   buyers: [
     "Households",
     "Restaurants",
@@ -410,15 +410,15 @@ export const home = {
     "Partners and investors",
   ],
   linesKicker: "What you can order",
-  linesHeading: "One farm. Four ways to fill an order.",
+  linesHeading: "Four ways we can fill your order.",
   linesBody: "Pick live animals, meat for the pot, crops from the field, or gari and starch already processed. You can ask for more than one in the same message.",
-  aboutLink: "Meet the farm",
-  whyKicker: "Why buy from EDSAVIN",
-  whyHeading: "You talk to the farm, and you agree before you pay.",
+  aboutLink: "Who we are",
+  whyKicker: "Why buy from us",
+  whyHeading: "You talk to us, and you agree before you pay.",
   why: [
     {
-      title: "You deal with the farm",
-      text: "Your message goes to EDSAVIN CONSULT AND TRADING. You are not left guessing which trader handled the goods.",
+      title: "You deal with us",
+      text: "Your message comes straight to us. You are not left guessing which trader handled the goods.",
     },
     {
       title: "You hear what is ready",
@@ -454,9 +454,9 @@ export const home = {
   ctaKicker: "Ready when you are",
   ctaHeading: "Tell us what you need today.",
   ctaBody: "A family bag or a bulk order uses the same path. Name the product and the quantity. We reply with what is actually ready.",
-  metaTitle: "Order food from the farm",
+  metaTitle: "Order food from us",
   metaDescription:
-    "Households, kitchens and traders in Ghana can enquire with EDSAVIN CONSULT AND TRADING for livestock, meat, crops, gari and starch. We confirm what is ready. No payment on the site.",
+    "We are EDSAVIN CONSULT AND TRADING. Households, kitchens and traders in Ghana can ask us for livestock, meat, crops, gari and starch. We confirm what is ready. No payment on the site.",
 };
 
 export const whyBuy = home.why;
@@ -476,11 +476,11 @@ export const ordering = {
     },
     {
       title: "We confirm the practical details",
-      text: "EDSAVIN CONSULT AND TRADING replies with what is ready, how it is packed, where you can collect or how delivery can work, and how to pay.",
+      text: "We reply with what is ready, how it is packed, where you can collect or how delivery can work, and how to pay.",
     },
     {
       title: "You decide",
-      text: "If the reply suits you, the order goes ahead. This website never takes the money.",
+      text: "If our reply suits you, the order goes ahead. We never take the money on this website.",
     },
   ],
   paymentLabel: "How you pay",
@@ -492,7 +492,7 @@ export const ordering = {
 export const faq = [
   {
     q: "Can I pay on this website?",
-    a: "No. There is no basket and no checkout. You agree the order with the farm first. Payment happens the way EDSAVIN CONSULT AND TRADING confirms in the reply.",
+    a: "No. We have no basket and no checkout. You agree the order with us first. We tell you how to pay in our reply.",
   },
   {
     q: "Will it be in stock when I need it?",
@@ -500,11 +500,11 @@ export const faq = [
   },
   {
     q: "Can you supply me every week?",
-    a: "Tell us the rhythm and the quantity. We will say whether we can keep it up. A fixed supply calendar is not published yet.",
+    a: "Tell us the rhythm and the quantity. We will say whether we can keep it up. We have not published a fixed supply calendar yet.",
   },
   {
     q: "How is the meat handled?",
-    a: "Ask in the same message. We describe how that order is prepared and handed over before you agree. A handling certificate is not published here.",
+    a: "Ask us in the same message. We describe how we prepare and hand over that order before you agree. We have not published a handling certificate here.",
   },
   {
     q: "Do you deliver, or do I collect?",
@@ -512,40 +512,40 @@ export const faq = [
   },
   {
     q: "Is there a minimum order?",
-    a: "No minimum is published. Write the quantity you need, including a bulk figure, and we will say if we can meet it.",
+    a: "We have not published a minimum. Write the quantity you need, including a bulk figure, and we will say if we can meet it.",
   },
   {
     q: "I am a distributor or an investor. Is this form for me?",
-    a: "Yes. Choose a general enquiry and say what you have in mind. The farm reads that message too.",
+    a: "Yes. Choose a general enquiry and tell us what you have in mind. We read that message too.",
   },
 ];
 
 export const about = {
-  metaTitle: "The farm behind the order",
+  metaTitle: "Who we are",
   metaDescription:
-    "Mr Saaka owns EDSAVIN CONSULT AND TRADING, a Ghanaian farm selling livestock, meat, crops, gari and starch. Read what it does, then send an enquiry.",
-  title: "The farm you are ordering from.",
-  lede: "EDSAVIN CONSULT AND TRADING is Mr Saaka's farm business in Ghana. It rears animals, sells meat, grows crops, and turns cassava into gari and starch.",
-  storyKicker: "What it does",
+    "We are EDSAVIN CONSULT AND TRADING, Mr Saaka's farm business in Ghana. We rear livestock, sell meat, grow crops, and make gari and starch. Send us an enquiry.",
+  title: "You are ordering from us.",
+  lede: "We are EDSAVIN CONSULT AND TRADING, Mr Saaka's farm business in Ghana. We rear animals, sell meat, grow crops, and turn cassava into gari and starch.",
+  storyKicker: "What we do",
   storyHeading: "Animals, meat, crops, gari and starch.",
   story: [
-    "Mr Saaka owns the business. Buyers deal with EDSAVIN CONSULT AND TRADING, not with an unnamed middle seller.",
-    "The livestock are guinea fowl, duck, rabbit, sheep, cattle, goat and tortoise.",
-    "The meat on offer is goat meat, beef and sheep meat, also called mutton. That meat line is growing.",
-    "The crops are cassava, maize and beans. Cassava is also processed into gari and starch.",
+    "Mr Saaka owns EDSAVIN CONSULT AND TRADING. You deal with us, not with an unnamed middle seller.",
+    "We rear guinea fowl, duck, rabbit, sheep, cattle, goat and tortoise.",
+    "We sell goat meat, beef and sheep meat, also called mutton. That meat line is growing.",
+    "We grow cassava, maize and beans. We also process cassava into gari and starch.",
   ],
-  storyGap: "How the farm started, in Mr Saaka's own words.",
+  storyGap: "How we started, in Mr Saaka's own words.",
   promiseHeading: "What you can count on",
-  promise: "A reply from the farm, a clear yes or no on what is ready, and an order agreed before any money changes hands.",
+  promise: "A reply from us, a clear yes or no on what is ready, and an order we agree with you before any money changes hands.",
   valuesHeading: "How an order is treated",
   values: [
     { title: "A straight answer", text: "We say what we can supply for your date. If we cannot, we say that too." },
-    { title: "No charge on the site", text: "You read the reply, then you decide. The website does not take payment." },
+    { title: "No charge on the site", text: "You read our reply, then you decide. We do not take payment on this website." },
     { title: "Mixed orders are welcome", text: "Meat and gari, or birds and maize, can travel in one message." },
     { title: "A door for partners", text: "Distributors and investors use the same enquiry. Say what you want to discuss." },
   ],
   teamHeading: "Who replies",
-  teamLead: "Mr Saaka owns the business. Other names and photographs have not been added yet.",
+  teamLead: "Mr Saaka owns EDSAVIN CONSULT AND TRADING. We have not added other names and photographs yet.",
   photoGap: "Photo",
   team: [
     {
@@ -557,20 +557,20 @@ export const about = {
     },
     {
       name: "Name",
-      role: "Role on the farm",
+      role: "Role with us",
       bio: "Not sent yet.",
       nameIsPlaceholder: true,
       roleIsPlaceholder: true,
     },
   ],
-  ctaHeading: "Ask the farm a direct question.",
-  ctaBody: "If you want to know who you are buying from, send the enquiry. Name the product, or say you want to talk about a partnership.",
+  ctaHeading: "Ask us a direct question.",
+  ctaBody: "If you want to know who you are buying from, send us the enquiry. Name the product, or say you want to talk about a partnership.",
 };
 
 export const livestockPage = {
-  metaTitle: "Live animals from the farm",
+  metaTitle: "Order live animals from us",
   metaDescription:
-    "Order guinea fowl, duck, rabbit, sheep, cattle, goat or tortoise from EDSAVIN CONSULT AND TRADING. Say how many. We confirm what is ready.",
+    "We rear guinea fowl, duck, rabbit, sheep, cattle, goat and tortoise. We are EDSAVIN CONSULT AND TRADING. Tell us how many. We confirm what is ready.",
   title: "Live animals, asked for by the number you need.",
   lede: "Guinea fowl, duck, rabbit, sheep, cattle, goat and tortoise. Open a card, say how many and which day, then send the enquiry or the WhatsApp order.",
   note: "We confirm what is ready. We do not list a price or a promise of stock on this page.",
@@ -581,9 +581,9 @@ export const livestockPage = {
 export const meatPage = {
   metaTitle: "Goat meat, beef and mutton",
   metaDescription:
-    "Order goat meat, beef or mutton from EDSAVIN CONSULT AND TRADING. We confirm the cut and the day before you pay. No checkout.",
+    "We sell goat meat, beef and mutton. We are EDSAVIN CONSULT AND TRADING. We confirm the cut and the day before you pay. We have no checkout.",
   title: "Meat for the pot, confirmed before you pay.",
-  lede: "Goat meat, beef and mutton for the house, the restaurant, the chop bar, the hotel and the caterer. Ask what is ready. You are not charged on this page.",
+  lede: "Goat meat, beef and mutton for the house, the restaurant, the chop bar, the hotel and the caterer. Ask us what is ready. We do not charge you on this page.",
   concerns: [
     {
       title: "You choose the day",
@@ -591,15 +591,15 @@ export const meatPage = {
     },
     {
       title: "You can ask how it is handled",
-      text: "Put that question in the same message. We answer before you agree. A certificate is not published here.",
+      text: "Put that question in the same message. We answer before you agree. We have not published a certificate here.",
     },
     {
       title: "Bulk is the same path",
       text: "Write the weight a hotel or a distributor needs. We say if we can meet it.",
     },
   ],
-  expansionHeading: "This part of the farm is growing",
-  expansion: "Goat meat, beef and mutton sit beside the live animals, and this meat line is expanding.",
+  expansionHeading: "Our meat line is growing",
+  expansion: "We sell goat meat, beef and mutton alongside our live animals, and we are expanding that meat line.",
   expansionGap: "The extra cuts and volumes in that expansion",
   ctaHeading: "Name the meat, the weight and the day.",
   ctaBody: "We reply with the cut we can supply and how you collect or pay. Live goats and sheep are on the Livestock page if you want the animal, not the meat.",
@@ -608,27 +608,27 @@ export const meatPage = {
 export const cropsPage = {
   metaTitle: "Cassava, maize and beans",
   metaDescription:
-    "Order cassava, maize or beans from EDSAVIN CONSULT AND TRADING. Ask the season and the bag size. We confirm before you commit.",
-  title: "Crops from the farm, not from a trader's store.",
-  lede: "Cassava, maize and beans for the pot, the mill or resale. Ask the season and the bag. Cassava can also be ordered as gari or starch.",
-  note: "Seasons and pack sizes are confirmed in the reply. They are not listed as fixed figures here.",
+    "We grow cassava, maize and beans. We are EDSAVIN CONSULT AND TRADING. Ask us the season and the bag size. We confirm before you commit.",
+  title: "Crops we grow, not goods from a trader's store.",
+  lede: "Cassava, maize and beans for the pot, the mill or resale. Ask us the season and the bag. You can also order our cassava as gari or starch.",
+  note: "We confirm seasons and pack sizes in our reply. We do not list them as fixed figures here.",
   ctaHeading: "Say the crop, the form and the quantity.",
   ctaBody: "Fresh or dry, one bag or many. Write it in your own words and we will say what that harvest can give you.",
 };
 
 export const processingPage = {
-  metaTitle: "Gari and starch from the farm",
+  metaTitle: "Our gari and starch",
   metaDescription:
-    "Order gari and cassava starch from EDSAVIN CONSULT AND TRADING. The roots are grown on the farm. Bag sizes are confirmed when you enquire.",
-  title: "Gari and starch from cassava grown here.",
-  lede: "You can order the finished product and know the roots came from the same farm. Say the bags you need. We confirm size and what is ready.",
+    "We make gari and cassava starch, and we grow the roots. We are EDSAVIN CONSULT AND TRADING. We confirm bag sizes when you enquire.",
+  title: "Gari and starch from cassava we grow.",
+  lede: "Order the finished product and know we grew the roots. Say the bags you need. We confirm the size and what is ready.",
   gariHeading: "How gari is usually made",
-  gariLead: "This is the ordinary path from root to gari. Ask us to confirm how this farm does it.",
+  gariLead: "This is the ordinary path from root to gari. Ask us how we do it.",
   gariSteps: ["Peel and wash the roots", "Grate them", "Ferment and press", "Sift and roast into gari"],
   starchHeading: "How starch is usually made",
-  starchLead: "This is the ordinary path from root to starch. Ask us to confirm how this farm does it.",
+  starchLead: "This is the ordinary path from root to starch. Ask us how we do it.",
   starchSteps: ["Peel and wash the roots", "Grate them", "Wash the pulp and let the starch settle", "Dry the starch"],
-  methodGap: "This farm's own timings and equipment",
+  methodGap: "Our timings and equipment",
   journeyLink: "Follow cassava from the field to the buyer",
   ctaHeading: "Order the bag you actually need.",
   ctaBody: "A shop shelf and a hotel store can ask in the same form. Name gari, starch, or both.",
@@ -647,8 +647,8 @@ export const journey: JourneyStep[] = [
   {
     id: "field",
     kicker: "01",
-    title: "Grown on the farm",
-    text: "The cassava starts in EDSAVIN CONSULT AND TRADING's fields, with maize and beans on the same farm.",
+    title: "Grown in our fields",
+    text: "We grow the cassava here, with our maize and beans.",
     note: "Where the fields are, and how long a season runs",
     photo: photos.journeyField,
   },
@@ -656,7 +656,7 @@ export const journey: JourneyStep[] = [
     id: "harvest",
     kicker: "02",
     title: "Lifted when it is ready",
-    text: "Roots come out of the ground to be sold fresh, or to be turned into gari and starch.",
+    text: "We lift the roots when they are ready, to sell fresh or to turn into gari and starch.",
     note: "Harvest months",
     photo: photos.journeyHarvest,
   },
@@ -664,8 +664,8 @@ export const journey: JourneyStep[] = [
     id: "process",
     kicker: "03",
     title: "Turned into food you can store",
-    text: "Some roots are roasted into gari. Some are washed and settled into starch. You can order either.",
-    note: "This farm's own method and tools",
+    text: "We roast some roots into gari. We wash and settle others into starch. You can order either.",
+    note: "Our own method and tools",
     photo: photos.journeyProcess,
   },
   {
@@ -680,7 +680,7 @@ export const journey: JourneyStep[] = [
     id: "buyer",
     kicker: "05",
     title: "In your kitchen or your shop",
-    text: "Send the enquiry or the WhatsApp order. The farm confirms, then the goods move. You do not pay on this website.",
+    text: "Send us the enquiry or the WhatsApp order. We confirm, then the goods move. You do not pay on this website.",
     note: "Collection points, delivery areas and how to pay",
     photo: photos.gari,
   },
@@ -691,22 +691,22 @@ export type GalleryCategory = "Livestock" | "Fields" | "Processing" | "Farm work
 export const galleryCategories: GalleryCategory[] = ["Livestock", "Fields", "Processing", "Farm work"];
 
 export const galleryPage = {
-  metaTitle: "See the farm, then order",
+  metaTitle: "See our work, then order",
   metaDescription:
-    "Look through the animals, fields and gari processing, then send an order to EDSAVIN CONSULT AND TRADING. The farm's own photos are still to come.",
+    "Look through our animals, fields and gari, then send us an order. We are EDSAVIN CONSULT AND TRADING. Our own photos are still to come.",
   title: "Look first. Then send the order.",
   lede: "Animals, fields and gari in the pan. When you see what you need, enquire or open WhatsApp with that product named.",
-  photoGap: "The farm's own photographs are still to be added. These pictures show the kind of animals, fields and work you are ordering. The person feeding goats is not a named member of the team.",
+  photoGap: "Our own photographs are still to be added. These pictures show the kind of animals, fields and work you are ordering. The person feeding goats is not a named member of our team.",
   ctaHeading: "Seen enough to ask?",
   ctaBody: "Name the product in the enquiry. If you are still choosing, send a general message and we will tell you what is ready.",
 };
 
 export const gallery: { category: GalleryCategory; photo: Photo; caption: string }[] = [
-  { category: "Livestock", photo: photos.guineaFowl, caption: "Guinea fowl for a buyer who wants birds from the farm." },
+  { category: "Livestock", photo: photos.guineaFowl, caption: "Guinea fowl, if you want birds from us." },
   { category: "Livestock", photo: photos.duck, caption: "Ducks. Ask how many are ready." },
   { category: "Livestock", photo: photos.rabbit, caption: "Rabbits kept for smaller orders." },
   { category: "Livestock", photo: photos.sheep, caption: "Sheep. Order live, or ask for mutton." },
-  { category: "Livestock", photo: photos.cattle, caption: "Cattle for a buyer who needs the animal from the farm." },
+  { category: "Livestock", photo: photos.cattle, caption: "Cattle, if you need the animal from us." },
   { category: "Livestock", photo: photos.goat, caption: "Goats. Live animals and goat meat are separate orders." },
   { category: "Livestock", photo: photos.tortoise, caption: "Tortoise. Ask what is available." },
   { category: "Fields", photo: photos.galleryFields, caption: "Fields that feed both the crop order and the gari." },
@@ -729,11 +729,11 @@ export const gallery: { category: GalleryCategory; photo: Photo; caption: string
 export const enquiryPage = {
   metaTitle: "Send an order enquiry",
   metaDescription:
-    "Tell EDSAVIN CONSULT AND TRADING the product and the quantity. We confirm what is ready. Or open WhatsApp with the product already named. No payment here.",
+    "Tell us the product and the quantity. We are EDSAVIN CONSULT AND TRADING, and we confirm what is ready. Or open WhatsApp with the product already named. No payment here.",
   title: "Send the order. We confirm what is ready.",
-  lede: "Name the product and the quantity. EDSAVIN CONSULT AND TRADING replies with availability, packing, and how to collect or pay. You can also open WhatsApp with the product already written.",
+  lede: "Name the product and the quantity. We reply with availability, packing, and how to collect or pay. You can also open WhatsApp with the product already written.",
   privacyLink: "How we use what you send",
-  sent: "Received. EDSAVIN CONSULT AND TRADING will reply on the phone or email you gave.",
+  sent: "Received. We will reply on the phone or email you gave.",
   asideHeading: "Prefer a chat?",
   aside: "WhatsApp opens a message that already names the product. Use it if that is faster than the form. You still agree the order in the chat. Nothing is paid here.",
 };
@@ -749,17 +749,17 @@ export const formCopy = {
   general: "General enquiry",
   quantity: "How much you need",
   quantityOptional: "optional",
-  quantityHint: "Write the number, weight or bags in your own words. Fixed pack sizes are not published yet.",
+  quantityHint: "Write the number, weight or bags in your own words. We have not published fixed pack sizes yet.",
   message: "Anything we should know",
   messageHint: "The day you need it, who it is for, and any question about handling, collection or a regular supply.",
   consent: "I have read how my details are used, and I agree they can be used to answer this order enquiry.",
-  hint: "You do not pay on this form. The farm confirms what is ready, then you decide.",
+  hint: "You do not pay on this form. We confirm what is ready, then you decide.",
   fax: "Fax",
   errors: {
     invalid: "Add your name, a real email, the product, and a message of at least a short sentence. Tick the consent box.",
     fast: "Please wait a moment, then send it again.",
     rate: "Too many messages just went from this connection. Wait a few minutes, or use WhatsApp.",
-    config: "The enquiry inbox is not connected yet. Use WhatsApp, or try the form again after the farm connects the email.",
+    config: "Our enquiry inbox is not connected yet. Use WhatsApp, or try the form again once we connect the email.",
     send: "The message did not go through. Please try again, or use WhatsApp.",
   },
 };
@@ -773,7 +773,7 @@ export const contact = {
   email: "placeholder@example.com",
   emailIsPlaceholder: true,
   addressLines: ["Street or landmark", "Town and region", "Ghana"],
-  mapNote: "Farm location, so buyers can find the pin",
+  mapNote: "Our location, so you can find the pin",
   socials: [
     { name: "Facebook", href: "https://example.com" },
     { name: "Instagram", href: "https://example.com" },
@@ -785,16 +785,16 @@ export const contact = {
 export const contactPage = {
   metaTitle: "Call, WhatsApp or write",
   metaDescription:
-    "Reach EDSAVIN CONSULT AND TRADING by phone, WhatsApp, email or a visit. Send an order enquiry if that is faster. Contact details are still being added.",
-  title: "Talk to the farm.",
-  lede: "Call, send a WhatsApp order, or use the enquiry form. The number, email and address are still being added. The form is ready now.",
+    "Call us, WhatsApp us or write to us. We are EDSAVIN CONSULT AND TRADING. Send an order enquiry if that is faster. Our contact details are still being added.",
+  title: "Talk to us.",
+  lede: "Call us, send a WhatsApp order, or use the enquiry form. Our number, email and address are still being added. The form is ready now.",
   phoneHeading: "Phone",
   phoneBody: "For a buyer who would rather speak.",
   whatsappHeading: "WhatsApp",
-  whatsappBody: "The button opens a message to the farm. The number itself is still being added, so check it before you rely on the chat.",
+  whatsappBody: "The button opens a message to us. Our number is still being added, so check it before you rely on the chat.",
   emailHeading: "Email",
-  emailBody: "This address is a stand-in. Order messages from the form go to the inbox the farm connects, which may not be this address yet.",
-  addressHeading: "Where the farm is",
+  emailBody: "This address is a stand-in. Messages from the form go to the inbox we connect, which may not be this address yet.",
+  addressHeading: "Where we are",
   socialHeading: "Social pages",
   socialBody: "The links are not real profiles yet.",
   socialNewTab: "placeholder, opens in a new tab",
@@ -806,44 +806,44 @@ export const contactPage = {
 export const privacy = {
   metaTitle: "How your enquiry is used",
   metaDescription:
-    "What EDSAVIN CONSULT AND TRADING does with the name, contact details and order message you send, and what happens if you use WhatsApp instead.",
-  title: "Your details are for the reply, not for a list.",
-  lede: "This notice says what happens to the name, phone, email and order message you send to EDSAVIN CONSULT AND TRADING. Please have it checked before the public launch.",
+    "How we, EDSAVIN CONSULT AND TRADING, use the name, contact details and order message you send us, and what happens if you use WhatsApp instead.",
+  title: "Your details are for our reply, not for a list.",
+  lede: "We are EDSAVIN CONSULT AND TRADING. This notice says what we do with the name, phone, email and order message you send us.",
   sections: [
     {
       heading: "What you send",
-      body: "The form takes your name, email, any phone number, any household or business name, the product, any note on quantity, and your message.",
+      body: "On the form we ask for your name, email, any phone number, any household or business name, the product, any note on quantity, and your message.",
     },
     {
       heading: "Why it is used",
-      body: "Those details are used to answer your order enquiry and to keep a record of that conversation. They are not sold and they are not put on a public list.",
+      body: "We use those details to answer your order enquiry and to keep a record of that conversation. We do not sell them, and we do not put them on a public list.",
     },
     {
       heading: "Where the message goes",
-      body: "The form emails the inbox the business has connected. If that inbox is not connected yet, the form says so. It does not pretend the message was delivered.",
+      body: "We email your message to the inbox we have connected. If that inbox is not connected yet, we say so. We do not pretend the message was delivered.",
     },
     {
       heading: "WhatsApp",
-      body: "A WhatsApp button opens a chat with the product already named. This website does not keep a copy of that chat. WhatsApp handles it under its own terms.",
+      body: "A WhatsApp button opens a chat with the product already named. We do not keep a copy of that chat. WhatsApp handles it under its own terms.",
     },
   ],
   retentionHeading: "How long it is kept",
-  retention: "How long enquiry messages are kept. They should stay only as long as needed to answer the order.",
+  retention: "How long we keep enquiry messages. We should keep them only as long as needed to answer the order.",
   analyticsHeading: "Analytics",
-  analytics: "Whether visit counting will be switched on. It stays off until a measurement ID is added.",
+  analytics: "Whether we will count visits. We leave it off until a measurement ID is added.",
   cookiesHeading: "Cookies",
-  cookies: "These pages do not set advertising cookies. If visit counting is switched on later, Google may set cookies to count visits.",
+  cookies: "We do not set advertising cookies on these pages. If we count visits later, Google may set cookies to do that.",
   rightsHeading: "Ask about your details",
   rightsBefore: "To ask what was received, or to ask for it to be deleted, use the",
   rightsLink: "contact page",
   rightsAfter: "The phone, email and address there are still being added.",
   legalHeading: "Still to add",
   legal: "Registered address, and any registration number.",
-  dated: "Notice written in November 2026 for this website.",
+  dated: "We wrote this notice in November 2026.",
 };
 
 export const footer = {
-  note: "Order livestock, meat, crops, gari and starch from the farm. No payment on this website.",
+  note: "We supply livestock, meat, crops, gari and starch. You do not pay on this website.",
   pages: "Pages",
   contact: "Contact",
   enquiry: "Enquiry / Order",
@@ -880,7 +880,7 @@ export const pages = [
 ] as const;
 
 export const clientChecklist: { item: string; where: string }[] = [
-  { item: "How the farm started, in Mr Saaka's words", where: "about.storyGap" },
+  { item: "How we started, in Mr Saaka's words", where: "about.storyGap" },
   { item: "Mr Saaka's short note and photograph", where: "about.team[0]" },
   { item: "Any other team name, role and photograph", where: "about.team[1]" },
   { item: "When each animal is ready, and how it is grouped for sale", where: "products livestock availability and pack" },
@@ -888,11 +888,11 @@ export const clientChecklist: { item: string; where: string }[] = [
   { item: "Extra cuts and volumes in the meat expansion", where: "meatPage.expansionGap" },
   { item: "Crop seasons and pack sizes", where: "products crops availability and pack" },
   { item: "Gari and starch bag sizes, and when they are ready", where: "products processing availability and pack" },
-  { item: "This farm's own gari and starch timings and equipment", where: "processingPage.methodGap and journey notes" },
+  { item: "Our gari and starch timings and equipment", where: "processingPage.methodGap and journey notes" },
   { item: "Field location and harvest months", where: "journey notes" },
   { item: "How buyers pay", where: "ordering.payment" },
   { item: "Collection points and delivery areas", where: "ordering.delivery" },
-  { item: "The farm's own photographs", where: "public/images and galleryPage.photoGap" },
+  { item: "Our own photographs", where: "public/images and galleryPage.photoGap" },
   { item: "Phone number, then phoneTel if it should be tappable", where: "contact.phoneDisplay and contact.phoneTel" },
   { item: "WhatsApp digits, then set whatsappIsPlaceholder to false", where: "contact.whatsappDigits" },
   { item: "Public email, then set emailIsPlaceholder to false", where: "contact.email" },
