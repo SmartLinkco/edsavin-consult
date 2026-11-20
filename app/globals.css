@@ -251,8 +251,8 @@ a { color: inherit; }
 .hero-shade {
   position: absolute;
   inset: auto 0 0 0;
-  height: 70%;
-  background: linear-gradient(to top, rgba(26, 26, 26, 0.92) 10%, rgba(26, 26, 26, 0.2) 70%, transparent);
+  height: 55%;
+  background: linear-gradient(to top, rgba(26, 26, 26, 0.45), rgba(26, 26, 26, 0));
   pointer-events: none;
 }
 .hero-card {
@@ -261,38 +261,41 @@ a { color: inherit; }
   width: min(40rem, calc(100% - 2rem));
   margin: 0 0 1.25rem 1rem;
   padding: 1.3rem 1.2rem 1.2rem;
-  background: var(--ink);
+  background: rgba(26, 26, 26, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 16px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22);
 }
 .hero .kicker { color: var(--white); }
-.hero-pause {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-}
 .pause-btn {
   display: inline-flex;
-  margin-top: 0.9rem;
-  min-height: 44px;
   align-items: center;
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: 0.85rem;
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  margin-top: 0.9rem;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(26, 26, 26, 0.62);
+  color: var(--white);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22);
   cursor: pointer;
 }
-.when-paused { display: none; }
-.hero:has(.hero-pause:checked) .hero-slide,
-.hero:has(.hero-pause:checked) .hero-slide .media-img { animation-play-state: paused; }
-.hero:has(.hero-pause:checked) .when-playing { display: none; }
-.hero:has(.hero-pause:checked) .when-paused { display: inline; }
+.pause-btn:hover { background: rgba(26, 26, 26, 0.78); }
+.pause-btn:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 3px;
+}
+.hero.is-paused .hero-slide,
+.hero.is-paused .hero-slide .media-img { animation-play-state: paused; }
 @media (prefers-reduced-motion: reduce) {
   .hero-slide, .hero-slide .media-img { animation: none; }
   .hero-slide { opacity: 0; }
   .hero-slide:first-child { opacity: 1; }
-  .pause-btn, .hero-pause { display: none; }
+  .pause-btn { display: none; }
 }
 
 .intro-grid, .split {
@@ -321,15 +324,19 @@ a { color: inherit; }
 .line-card-copy {
   position: relative;
   z-index: 1;
-  margin-top: auto;
-  padding: 1rem;
-  background: linear-gradient(to top, rgba(26, 26, 26, 0.94) 10%, rgba(26, 26, 26, 0.78));
+  margin: auto 0.65rem 0.65rem;
+  padding: 0.85rem 0.9rem;
+  background: rgba(26, 26, 26, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 12px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22);
 }
 .line-card h3 { font-size: 1.7rem; }
 .line-no {
   font-family: var(--display);
   font-weight: 800;
-  color: var(--red);
+  font-size: 1.25rem;
+  color: var(--white);
   margin: 0;
 }
 
@@ -611,6 +618,21 @@ textarea { min-height: 9rem; resize: vertical; }
   margin: 0 0 0.6rem;
 }
 .site-footer a { color: var(--white); }
+.site-footer a.btn-light {
+  color: var(--ink);
+  background: var(--white);
+  border-color: var(--white);
+  min-height: 48px;
+}
+.site-footer a.btn-light:hover {
+  color: var(--ink);
+  background: var(--mist);
+  border-color: var(--mist);
+}
+.site-footer a.btn-light:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 3px;
+}
 .site-footer ul { list-style: none; margin: 0; padding: 0; }
 .site-footer li { margin: 0.25rem 0; }
 .footer-note { color: var(--mist); max-width: 22rem; }
@@ -644,9 +666,34 @@ body { padding-bottom: 5rem; }
 .prose h2 { margin-top: 1.8rem; font-size: 1.6rem; }
 .not-found { padding: 4rem 0 5rem; }
 
+@supports ((backdrop-filter: blur(16px)) or (-webkit-backdrop-filter: blur(16px))) {
+  .hero-card,
+  .line-card-copy,
+  .pause-btn {
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .hero-card,
+  .line-card-copy,
+  .pause-btn {
+    background: #1a1a1a;
+  }
+}
+
 @media (max-width: 699px) {
   .hero { padding-bottom: 7.4rem; }
   .hero .actions { display: none; }
+  .lines { gap: 1rem; }
+  .line-card { min-height: 240px; }
+  .line-card h3 { font-size: 1.45rem; }
+  .line-card-copy p { font-size: 1rem; line-height: 1.45; }
+  .inline-cta {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
 }
 
 @media (min-width: 700px) {

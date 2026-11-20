@@ -4,7 +4,8 @@ import { FarmToTable } from "@/components/FarmToTable";
 import { Photo } from "@/components/Photo";
 import { ClosingBand, Faq, OrderSteps, WhyBuy } from "@/components/Trust";
 import { ProductExplorer } from "@/components/ProductExplorer";
-import { cta, COMPANY, home, journey, lines, photos } from "@/content/site";
+import { HeroPause } from "@/components/HeroPause";
+import { COMPANY, home, journey, lines, photos } from "@/content/site";
 
 const slides = [photos.heroFields, photos.heroLivestock, photos.heroProcessing];
 
@@ -12,7 +13,6 @@ export default function HomePage() {
   return (
     <>
       <section className="hero" aria-labelledby="home-heading">
-        <input className="hero-pause" id="hero-pause" type="checkbox" />
         <div className="hero-slides">
           {slides.map((slide, index) => (
             <div className="hero-slide" key={slide.src}>
@@ -26,10 +26,7 @@ export default function HomePage() {
           <h1 id="home-heading">{home.headline}</h1>
           <p>{home.lead}</p>
           <Actions enquireClass="btn btn-red" whatsAppClass="btn btn-light" />
-          <label className="pause-btn" htmlFor="hero-pause">
-            <span className="when-playing">{cta.pause}</span>
-            <span className="when-paused">{cta.play}</span>
-          </label>
+          <HeroPause />
         </div>
       </section>
 
@@ -53,7 +50,7 @@ export default function HomePage() {
             <h2 id="lines-heading">{home.linesHeading}</h2>
             <p>{home.linesBody}</p>
             <p>
-              <Link href="/about">{home.aboutLink}</Link>
+              <Link className="inline-cta" href="/about">{home.aboutLink}</Link>
             </p>
           </div>
           <ul className="lines">
